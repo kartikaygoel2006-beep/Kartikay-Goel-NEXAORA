@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Pink sandstone — Jaipur's signature stone colour */
+  --color-sandstone-50: #fdf4f1;
+  --color-sandstone-100: #fbe6df;
+  --color-sandstone-200: #f5c8ba;
+  --color-sandstone-300: #eba38c;
+  --color-sandstone-400: #dd7a5c;
+  --color-sandstone-500: #c65f3f;
+  --color-sandstone-600: #a84a30;
+  --color-sandstone-700: #863a26;
+  --color-sandstone-800: #6b301f;
+  --color-sandstone-900: #56281b;
+
+  /* Royal blue */
+  --color-royal-50: #eef2fb;
+  --color-royal-100: #dbe3f6;
+  --color-royal-200: #b3c3ec;
+  --color-royal-300: #8298de;
+  --color-royal-400: #526dcb;
+  --color-royal-500: #2f4bb0;
+  --color-royal-600: #223a8e;
+  --color-royal-700: #1c2f71;
+  --color-royal-800: #18265a;
+  --color-royal-900: #131f47;
+
+  /* Gold accent */
+  --color-gold-50: #fdf9ec;
+  --color-gold-100: #f9edc7;
+  --color-gold-200: #f2d888;
+  --color-gold-300: #e9c05a;
+  --color-gold-400: #d9a934;
+  --color-gold-500: #bd8b24;
+  --color-gold-600: #97701e;
+  --color-gold-700: #77591c;
+  --color-gold-800: #61481c;
+  --color-gold-900: #513c1b;
+
+  /* Cream neutrals */
+  --color-cream-50: #fffdf9;
+  --color-cream-100: #fbf6ec;
+  --color-cream-200: #f5ecd9;
+  --color-cream-300: #ece0c4;
+  --color-cream-400: #d9c8a3;
+  --color-cream-500: #bfa87c;
+  --color-cream-600: #9c8760;
+  --color-cream-700: #79694c;
+  --color-cream-800: #4f4534;
+  --color-cream-900: #2e2820;
+
+  --color-ink: #251c17;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream-50);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Subtle Rajasthani jaali lattice motif — used sparingly as a section backdrop */
+.pattern-jaali {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23a84a30' stroke-width='1' stroke-opacity='0.12'%3E%3Ccircle cx='32' cy='32' r='26'/%3E%3Ccircle cx='32' cy='32' r='14'/%3E%3Cpath d='M32 6v52M6 32h52M13.7 13.7l36.6 36.6M50.3 13.7L13.7 50.3'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.pattern-jaali-gold {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23d9a934' stroke-width='1' stroke-opacity='0.35'%3E%3Ccircle cx='32' cy='32' r='26'/%3E%3Ccircle cx='32' cy='32' r='14'/%3E%3Cpath d='M32 6v52M6 32h52M13.7 13.7l36.6 36.6M50.3 13.7L13.7 50.3'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+::selection {
+  background-color: var(--color-gold-200);
+  color: var(--color-ink);
 }
