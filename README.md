@@ -1,5 +1,7 @@
 # Studio 1947 — Jaipur Heritage
 
+*Our team product based on Indian heritage and culture.*
+
 A full-stack heritage website for documenting Jaipur's monuments, forts, crafts and
 history. **No content is prefilled or auto-generated.** Every city, monument, fort,
 craft, image and source must be entered by an administrator through the admin
